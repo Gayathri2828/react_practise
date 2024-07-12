@@ -1,11 +1,26 @@
-Conditional rendering in react :
 
-Conditional rendiring refers to what we need to show in the UI, based on the conditional we will display UI
+4 different ways to style react app:
+1. Inline styling or object styling
+rule: camelCase styling
+backgroundColor
 
-3 ways for conditional rendering:
+2. External styling(.css)
+3. External module css(.module.css)
+4. Stylesheet styling or external css frameworks library styling Sass styling.
 
-1. if/else
-2. termary operator (condition ? ecpression1 ; expression2)
-3. logical AND operator (short circuit operator) && (handles only the true case)
+
+
+
+css frameworks:
+
+1. Bootstrap
+2. Tailwind css
+3. Material UI
+4. Chakra UI
+5. Ant design
+6. style sheets etc...
+
+
+
 
 

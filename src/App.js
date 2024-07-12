@@ -1,6 +1,8 @@
 import { ImageComponents } from "./components/image/imageComponent";
 import {Card} from "./components/card/card"
 import { ListParentOrdered } from "./components/list/listParent";
+import ButtonComponent from "./components/button/button";
+import "./index.css";
 
 
 
@@ -60,10 +62,24 @@ const App = () => {
       {
         isLogin && 
         <>
+
+
             <h3>wellcome user good afternoon</h3>
-            <ListParentOrdered/>
+            {/* <ListParentOrdered/> */}
             {/* <ImageComponents/>
             <Card/> */}
+            <ButtonComponent/>
+            {/* <button 
+    // onClick={() => {}} 
+    // className="buttonText"
+    // // style={{ color: "red", backgroundColor: "green" }}
+    // // style={buttonStyle}
+    // > 
+    //     Click me
+    // </button> */}
+
+  
+            
         </>
       }
     </div>
