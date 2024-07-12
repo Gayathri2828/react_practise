@@ -2,7 +2,7 @@
 
 const ButtonComponent = () =>{
     return (
-    <button omClick={() => {}} className=""> 
+    <button onClick={() => {}} className=""> 
         Click me</button>
     )
 };
