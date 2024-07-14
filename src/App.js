@@ -1,92 +1,40 @@
-import { ImageComponents } from "./components/image/imageComponent";
-import {Card} from "./components/card/card"
-import { ListParentOrdered } from "./components/list/listParent";
-import ButtonComponent from "./components/button/button";
+import React from "react";
+import { Card } from "./components/card/card.js";
+import { ImageComponents } from "./components/image/imageComponent.js";
+import { ListParentOrdered } from "./components/list/listParent.js";
 import "./index.css";
-
-
-
-// if/else statement :---
-
-// const App = () => {
-//   const isLogin=true;
-//   if(isLogin){
-//   return(
-//     <>
-//       <h3>wellcome user good afternoon</h3>
-//       <ImageComponents/>
-//       <Card/>
-      
-
-//     </>
-//   );
-// } else {
-//   return(
-//     <>
-//     <h3>pleasr login to access the app</h3>
-//     </>
-//   );
-// }
-// };
-// export default App;
-
-
-
-// ternary operator:--
-
-// const App = () => {
-//   const islogin = true;
-//   return(
-//      <div>
-//         {islogin ? (
-//           <>
-//           <h3>wellcome user good afternoon</h3>
-//           <ImageComponents/>
-//           <Card/>
-//            </>
-//         ) : (
-//           <h3>please login to access the app</h3>
-//         )}
-//      </div>
-//   )
-// };
-// export default App;
-
-
-// logical AND operator:---
+import ButtonComponent from "./components/button/button.js";
+import FirstComponent from "./components/bootstrap/firstcomponent.js"
+import CustomAccordion from "./components/accordion/accordion.js";
+import CustomProgressBar from "./components/progress-bar/progress-bar.js";
+// import ButtonComponent from "./components/button/button.js";
 
 const App = () => {
   const isLogin = true;
+  // if (isLogin) {
+  //   return (
+  //     <>
+  //       <h3>Wellcome user good afternoon</h3>
+  //       <ImageComponent />
+  //       <Card />
+  //     </>
+  //   );
+  // } else {
+  //   return (
+  //     <>
+  //       <h3>Please login to access the app</h3>
+  //     </>
+  //   );
+  // }
   return (
     <div>
-      {
-        isLogin && 
-        <>
-
-
-            <h3>wellcome user good afternoon</h3>
-            {/* <ListParentOrdered/> */}
-            {/* <ImageComponents/>
-            <Card/> */}
-            <ButtonComponent/>
-            {/* <button 
-    // onClick={() => {}} 
-    // className="buttonText"
-    // // style={{ color: "red", backgroundColor: "green" }}
-    // // style={buttonStyle}
-    // > 
-    //     Click me
-    // </button> */}
-
-  
-            
-        </>
-      }
+      <CustomProgressBar />
+      <FirstComponent />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
 
 
