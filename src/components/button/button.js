@@ -1,17 +1,18 @@
-import "./button.css"
-import styles from "./button.module.css"
+import "./button.css";
+import styles from "./button.module.css";
 
-const ButtonComponent = () => {
-    const buttonStyle={color: "red", backgroundColor: "green"}
-    return (
-    <button 
-    onClick={() => {}} 
-    className={styles.buttoncss}
-    // style={{ color: "red", backgroundColor: "green" }}
-    // style={buttonStyle}
-    > 
-        Click me
+const ButtonComponent = (prop) => {
+  const buttonStyle = { color: "red", backgroundColor: "green" };
+
+  const { text, bgColor, onPress, width, height } = prop;
+  return (
+    <button
+      onClick={onPress}
+      className={styles.buttonCss}
+      style={{ backgroundColor: bgColor, width: width, height: height }}
+    >
+      {text}
     </button>
-    )
+  );
 };
 export default ButtonComponent;

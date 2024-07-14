@@ -1,30 +1,35 @@
 Website
+
 1. static -> UI
 2. dynamic -> Function
 
-
 React props and state
 Props :
+
 1. Additional information given to the component
-2. for component we can have as many custom props 
+2. for component we can have as many custom props
 3. props are user defined
 4. using props we can communicate from parent to child(data forward from parent to child)
 5. props are imutable(we cannot change over the time)
 6. prop is an object which holds a data
 
-
 There are 2 ways for the props
+
 1. General prop
 2. childern prop
 
+Genaral prop :
 
-Genaral prop : 
 <ImageComponent src="path" width="" height="" alt="">
 
+<button text="" backgroundaColor="" height="" width="" textColor="">
 
+childern prop
 
+1. Using childern prop we can nest the components
+2. to receive the childern prop we must use childern keyword
 
+React Fragments:
 
-
-
-
+1. <></>
+2. <React.Fragments></React.Fragments>
