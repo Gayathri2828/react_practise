@@ -1,35 +1,47 @@
-Website
+1. function
+2. class -> 2013-2018
 
-1. static -> UI
-2. dynamic -> Function
+Babel : Babel is transpiler which transpiles JSX code to js code or browser understandable code
 
-React props and state
-Props :
+class component:
 
-1. Additional information given to the component
-2. for component we can have as many custom props
-3. props are user defined
-4. using props we can communicate from parent to child(data forward from parent to child)
-5. props are imutable(we cannot change over the time)
-6. prop is an object which holds a data
+1. render method : render is the required method in class components to insert JSX in the dom
 
-There are 2 ways for the props
+State and props:
 
-1. General prop
-2. childern prop
+State: state is an object which holds the information or data of a particular component
+state can make dynamic websites
+state is private to a component
+state is mutable
+To access the state in react class components, we need to use this keyword
 
-Genaral prop :
+there are 2 ways to create state in react class based components
 
-<ImageComponent src="path" width="" height="" alt="">
+1. object way of creation
+2. construction way of creation
 
-<button text="" backgroundaColor="" height="" width="" textColor="">
+To change the state we must use setstate method.
+whenever are using setstate method, component will re-render to show updated layout.
+state changes are asynchronous.
 
-childern prop
+wrong usage of a state
+let a=20
+a=30(we can reassign)
 
-1. Using childern prop we can nest the components
-2. to receive the childern prop we must use childern keyword
+const a=12
+a=20(we cant reassign)
 
-React Fragments:
+using state concepts
 
-1. <></>
-2. <React.Fragments></React.Fragments>
+ex: youtube button
+data : subscribe,subscribed
+intialState : subscribe
+event : onClick
+finalState : subscribed
+
+Events :
+to attach the method in class componet , i need to use this.methodName
+
+onClick={this.methodNmae}
+
+CRUD: create the data, read the data, update the data, delete the data.
