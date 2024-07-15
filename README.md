@@ -1,130 +1,47 @@
-<!-- # Getting Started with Create React App
+1. function
+2. class -> 2013-2018
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Babel : Babel is transpiler which transpiles JSX code to js code or browser understandable code
 
-## Available Scripts
+class component:
 
-In the project directory, you can run:
+1. render method : render is the required method in class components to insert JSX in the dom
 
-### `npm start`
+State and props:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+State: state is an object which holds the information or data of a particular component
+state can make dynamic websites
+state is private to a component
+state is mutable
+To access the state in react class components, we need to use this keyword
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+there are 2 ways to create state in react class based components
 
-### `npm test`
+1. object way of creation
+2. construction way of creation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To change the state we must use setstate method.
+whenever are using setstate method, component will re-render to show updated layout.
+state changes are asynchronous.
 
-### `npm run build`
+wrong usage of a state
+let a=20
+a=30(we can reassign)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+const a=12
+a=20(we cant reassign)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+using state concepts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ex: youtube button
+data : subscribe,subscribed
+intialState : subscribe
+event : onClick
+finalState : subscribed
 
-### `npm run eject`
+Events :
+to attach the method in class componet , i need to use this.methodName
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+onClick={this.methodNmae}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
-
-
-11-06-2024(Tuesday):-
--------------------
-
-Components:
-Components are the independent resuable bits of code which creates part of user interface. 
-
-Examples of UI:
-1. Button
-2. Image
-3. Heading
-4. Card
-5. Footer
-6. Home screen
-7. About screen
-
-Componebts were created in the .js, ,jsx ,.tsx
-js- javascript
-jsx- javascript XML
-tsx- typescript XML
-
-note: in a file we can create as many as components(.js we can many components)
-
-Types of components:
-we have 2 types of components in react
-
-1. Functional based components -> A component designed using plain js functions.
-2. Class based components-> A component designed using classes in js.
-
-Component
-Every component must start with the capital letter.
-Every component can return the markup.
-Component can be as small as the button or as large as a screen (page).
-
-***React is completely a component based approach
-We will design a componet, will resue the component
-
-Example: I will creat button component, i will use the button component where ever the button appears
-
-ordered list
-1. apple
-2. banana
-
-unordered list
-1. apple
-2. banana
-
-ol- li
-ul- li
-
-
-<!-- 12-06-2024(wednesday):-
-
-this command uesd only at the first time
-git push --set-upstream origin main
-
-JSX:
-
-every componemmt returns the markp(HTML) -->
+CRUD: create the data, read the data, update the data, delete the data.
