@@ -1,47 +1,43 @@
-1. function
-2. class -> 2013-2018
+API: Application Programming Interface
 
-Babel : Babel is transpiler which transpiles JSX code to js code or browser understandable code
+Instagram :
 
-class component:
+methods : get, post, delete, put
 
-1. render method : render is the required method in class components to insert JSX in the dom
+get api call (server to client)
+post call(clinet to server)
+delete (client to server)
+put (clinet to server)
 
-State and props:
+fetch : fetch is used to happen https calls in clinet
+fetch return promise
 
-State: state is an object which holds the information or data of a particular component
-state can make dynamic websites
-state is private to a component
-state is mutable
-To access the state in react class components, we need to use this keyword
+fetching data in react application on page load :
+ways for fetching dsta in react data app:
 
-there are 2 ways to create state in react class based components
+1. fetch
+2. axios
+3. swr
+4. react query
 
-1. object way of creation
-2. construction way of creation
+fetch(URL).then().catch()
 
-To change the state we must use setstate method.
-whenever are using setstate method, component will re-render to show updated layout.
-state changes are asynchronous.
+ComponentDidMount : This method is used to cause the side effects with in the class component
 
-wrong usage of a state
-let a=20
-a=30(we can reassign)
+side effects : api calls(https calls),Dom manipulations, Event listeners, Timers
 
-const a=12
-a=20(we cant reassign)
+componentDidMount is self invoked method
+componentDidMount runs only once in a lifecycle
+componentDidMount will invoke after the render method
 
-using state concepts
+fetch and axios difference :
 
-ex: youtube button
-data : subscribe,subscribed
-intialState : subscribe
-event : onClick
-finalState : subscribed
+1. fetch doesn't convet to json, we need to manually
+2. fetch doesn't provide status codes
+3. fetch is provided by the browser web api
+4. fetch doesn't intercept the response and request
 
-Events :
-to attach the method in class componet , i need to use this.methodName
-
-onClick={this.methodNmae}
-
-CRUD: create the data, read the data, update the data, delete the data.
+5. axios converts to json automatically
+6. we will get the status code, based on the status codes, we will show the user interface
+7. axios is the third party library
+8. axios supports intercept the response and request

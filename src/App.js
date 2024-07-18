@@ -5,6 +5,10 @@
  import "./index.css";
  import ButtonComponentClass from "./components/class-components/button.js";
 import TodoComponent from "./components/class-components/todo/todo.js";
+import ProductListing from "./components/class-components/prooductListing/productListing.js";
+import Weather from "./components/weather/weather.js";
+
+import Counter from "./components/task/count.js";
 
 
 const App = () => {
@@ -12,7 +16,11 @@ const isLogin = true;
   return (
      <div>
         {/*<ButtonComponentClass/>*/}
-        <TodoComponent/>
+        {/*<TodoComponent/>*/}
+        
+        {/*< Weather/>*/}
+        {/*<Counter/>*/}
+        <ProductListing/>
         
       </div>
     );
