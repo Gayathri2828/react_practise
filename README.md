@@ -1,43 +1,80 @@
-API: Application Programming Interface
+Topics:
 
-Instagram :
+1. Lifecycle method in react class components
+2. Mounting phase
+3. Updating phase
+4. v-dom and dom , difference
 
-methods : get, post, delete, put
+Tasks:
 
-get api call (server to client)
-post call(clinet to server)
-delete (client to server)
-put (clinet to server)
+1. Repeat the class
+2. Material UI Custom components creation in react app
+3. Add circle part 1(add circles while clicking buttons)
+4. Add circle part 2(colored and uncolored)
+5. difference between vdom and dom
 
-fetch : fetch is used to happen https calls in clinet
-fetch return promise
+Life cycles in class component
 
-fetching data in react application on page load :
-ways for fetching dsta in react data app:
+Metaphor :
 
-1. fetch
-2. axios
-3. swr
-4. react query
+Earth :
 
-fetch(URL).then().catch()
+Human cycle :
 
-ComponentDidMount : This method is used to cause the side effects with in the class component
+1. Born stage
+2. Survival stage
+3. Expiry stage
 
-side effects : api calls(https calls),Dom manipulations, Event listeners, Timers
+Dom :
 
-componentDidMount is self invoked method
-componentDidMount runs only once in a lifecycle
-componentDidMount will invoke after the render method
+Component life cycle:
 
-fetch and axios difference :
+1. Mounting stage or phase
+2. Updating stage or phase
+3. Unmounting stage or phase
 
-1. fetch doesn't convet to json, we need to manually
-2. fetch doesn't provide status codes
-3. fetch is provided by the browser web api
-4. fetch doesn't intercept the response and request
+4. Every component will goes to different stages through out its execution , those were represented using
+   Component life cycles
+5. Component life cycle methods only present in class components
 
-5. axios converts to json automatically
-6. we will get the status code, based on the status codes, we will show the user interface
-7. axios is the third party library
-8. axios supports intercept the response and request
+6. Mounting stage or phase
+
+   1.1 render : this method is used to insert the jsx content in the browser, this method is mandatory
+   1.2 constructor : constructor is used for state initialization and binding the events
+   1.3 componentDidMount : this method is used to cause the side effects on the page load
+   1.4 getDerivedStateFromProps : this method is used to initialization the state based on the initial props
+
+side effects : data fetching , timers , event listeners, dom manipulations
+
+whenever state changes occurs , code will goes to render,getDerivedStateFromProps
+
+2. Updating stage or phase
+
+2.1 render
+2.2 getDerivedStateFromProps
+2.3 componentDidUpdate
+side effects : data fetching , timers , event listeners, dom manipulations
+2.4 shouldComponentUpdate
+2.5 getSnapShotBeforeUpdate
+
+3. UnMounting stage or phase
+1. componentWillUnmount
+
+DOM : Drawbacks :
+
+1. Entire html will be re-render when something updates
+2. More time to respond
+3. browser
+
+1 sec loading 5% users down
+
+Virtual dom : Virtual dom is a replica of original dom , which is just a memory represtation
+virtual dom will be maintained by the react itself
+
+with in vdom we have 2 algorithms:
+
+1. diffing algorithm : diffing algorithm will check the previous state and current state (previous dom and current dom), these changes will be noted
+2. reconcilation algorithm : reconcilation algorithm will perform the changes after comparison , only those changes will be updated in the real dom , without disturbing any other part of UI
+
+note: Because of vdom updates are very faster , loading time is minimal
+ex: 10 list item, when new list item is inserted , react creates a v-dom , compare changes with previous one , only updated new one

@@ -9,18 +9,14 @@ import ProductListing from "./components/class-components/prooductListing/produc
 import Weather from "./components/weather/weather.js";
 
 import Counter from "./components/task/count.js";
+import MountingPhase from "./components/class-components/mounting/mounting.js";
 
 
 const App = () => {
 const isLogin = true;
   return (
      <div>
-        {/*<ButtonComponentClass/>*/}
-        {/*<TodoComponent/>*/}
-        
-        {/*< Weather/>*/}
-        {/*<Counter/>*/}
-        <ProductListing/>
+       <MountingPhase favColor={"red"}/>
         
       </div>
     );

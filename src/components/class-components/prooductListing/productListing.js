@@ -4,15 +4,26 @@ import Customspinner from "../../customspinner/customspinner";
 const { Component } = require("react");
 
 class ProductListing extends Component {
-  state = {
-    productListing: [],
-    loading: false,
-    error: null,
-  };
+  //state = {
+  //  productListing: [],
+  //  loading: false,
+  //  error: null,
+  //};
+
+  constructor(){
+    super();
+    this.state={
+      productListing: [],
+      loading: false,
+      error: null,
+    }
+    }
 
   componentDidMount() {
     console.log("componentDidMount invoked...");
-    this.fetchData();
+    document.title="My project";
+    //this.fetchData();
+
   }
 
  
