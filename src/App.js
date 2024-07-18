@@ -1,38 +1,26 @@
+ import React from "react";
+ import { Card } from "./components/card/card.js";
+ import { ImageComponents } from "./components/image/imageComponent.js";
+ import { ListParentOrdered } from "./components/list/listParent.js";
+ import "./index.css";
+ import ButtonComponentClass from "./components/class-components/button.js";
+import TodoComponent from "./components/class-components/todo/todo.js";
+import ProductListing from "./components/class-components/prooductListing/productListing.js";
+import Weather from "./components/weather/weather.js";
 
+import Counter from "./components/task/count.js";
+import MountingPhase from "./components/class-components/mounting/mounting.js";
 
-import ButtonComponent from "./components/button/button.js";
-import { Heading1,Heading2,Heading3,Heading4,Heading5,Heading6 } from "./components/heading/headings.js";
-import { ListParentOrdered,ListParentUnordered } from "./components/list/listParent.js";
-import { ImageComponents } from "./components/image/imageComponent.js";
-import { Card } from "./card/card.js";
 
 const App = () => {
-  // const greeting="Good morning ram";
-  // const course="fullstack";
+const isLogin = true;
   return (
-  <div>
-    <ButtonComponent></ButtonComponent>
-    <Heading1></Heading1>
-    <Heading2></Heading2>
-    <Heading3></Heading3>
-    <Heading4></Heading4>
-    <Heading5></Heading5>
-    <Heading6></Heading6>
-    <ListParentOrdered/>
-    <ListParentUnordered/>
-    <ImageComponents></ImageComponents>
-    <Card></Card>
-
-    {/* <h3>hai 3:11pm code commit</h3>
-    <h3>{greeting}</h3>
-    <h3>{course}</h3>
-    {
-      [1,2].map((num,index) => (
-      <Card key={index}></Card>))
-    }
-
-    {false ?<Card></Card> : <h3>hai</h3>} */}
-</div>
+     <div>
+       <MountingPhase favColor={"red"}/>
+        
+      </div>
     );
-  };
+};
+
 export default App;
+
