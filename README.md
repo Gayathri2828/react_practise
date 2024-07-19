@@ -1,130 +1,106 @@
-<!-- # Getting Started with Create React App
+Topics:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Unmounting phase
+2. pure components
+3. Composition in react
+4. difference between funtional components and class components
 
-## Available Scripts
+Problem : I need to implement the circles based on the user events on the button
 
-In the project directory, you can run:
+Steps:
 
-### `npm start`
+1. Generate the circle , create a circle
+2. Add the button for circle addition, for every event push the true flag to the array
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Composition in react : Components is responsible for performing specific UI and functuality tasks, Every component will be nested to get the final UI , This nested of components to form final UI , we call it as the Composition in react
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Problem : Evry component re-renders when parent component re-renders, which slows the application performance
 
-### `npm test`
+Solution : Child has to re-render only when child state or prop changes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Pure component : Pure component helps us to skip the unnecassary renders of the components
+it makes component to update only when state or prop
+Internally pure component having the shouldComponentUpdate life cycle
 
-### `npm run build`
+Topics:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Lifecycle method in react class components
+2. Mounting phase
+3. Updating phase
+4. v-dom and dom , difference
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tasks:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Repeat the class
+2. Material UI Custom components creation in react app
+3. Add circle part 1(add circles while clicking buttons)
+4. Add circle part 2(colored and uncolored)
+5. difference between vdom and dom
 
-### `npm run eject`
+Life cycles in class component
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Metaphor :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Earth :
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Human cycle :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Born stage
+2. Survival stage
+3. Expiry stage
 
-## Learn More
+Dom :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Component life cycle:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Every component will goes to different stages through out its execution , those were represented using
+   Component life cycles
+2. Component life cycle methods only present in class components
 
-### Code Splitting
+3. Mounting stage or phase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   1.1 render : this method is used to insert the jsx content in the browser, this method is mandatory
+   1.2 constructor : constructor is used for state initialization and binding the events
+   1.3 componentDidMount : this method is used to cause the side effects on the page load
+   1.4 getDerivedStateFromProps : this method is used to initialization the state based on the initial props
 
-### Analyzing the Bundle Size
+side effects : data fetching , timers , event listeners, dom manipulations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+whenever state changes occurs , code will goes to render,getDerivedStateFromProps
 
-### Making a Progressive Web App
+2. Updating stage or phase
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2.1 render
+2.2 getDerivedStateFromProps
+2.3 componentDidUpdate
+side effects : data fetching , timers , event listeners, dom manipulations
+2.4 shouldComponentUpdate
+2.5 getSnapShotBeforeUpdate
 
-### Advanced Configuration
+3. UnMounting stage or phase :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+whenever component or elemens removed from dom , this phase we can call it as unMounting
 
-### Deployment
+1. componentWillUnmount : This method is used to perform the clean up tasks for the component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+This method is used to prevent the memory leaks in the applications.
+memory leaks like un-stopped timer , remove event listeners , This method makes the app performace to increase
 
-### `npm run build` fails to minify
+DOM : Drawbacks :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+1. Entire html will be re-render when something updates
+2. More time to respond
+3. browser
 
+1 sec loading 5% users down
 
-11-06-2024(Tuesday):-
--------------------
+Virtual dom : Virtual dom is a replica of original dom , which is just a memory represtation
+virtual dom will be maintained by the react itself
 
-Components:
-Components are the independent resuable bits of code which creates part of user interface. 
+with in vdom we have 2 algorithms:
 
-Examples of UI:
-1. Button
-2. Image
-3. Heading
-4. Card
-5. Footer
-6. Home screen
-7. About screen
+1. diffing algorithm : diffing algorithm will check the previous state and current state (previous dom and current dom), these changes will be noted
+2. reconcilation algorithm : reconcilation algorithm will perform the changes after comparison , only those changes will be updated in the real dom , without disturbing any other part of UI
 
-Componebts were created in the .js, ,jsx ,.tsx
-js- javascript
-jsx- javascript XML
-tsx- typescript XML
-
-note: in a file we can create as many as components(.js we can many components)
-
-Types of components:
-we have 2 types of components in react
-
-1. Functional based components -> A component designed using plain js functions.
-2. Class based components-> A component designed using classes in js.
-
-Component
-Every component must start with the capital letter.
-Every component can return the markup.
-Component can be as small as the button or as large as a screen (page).
-
-***React is completely a component based approach
-We will design a componet, will resue the component
-
-Example: I will creat button component, i will use the button component where ever the button appears
-
-ordered list
-1. apple
-2. banana
-
-unordered list
-1. apple
-2. banana
-
-ol- li
-ul- li
-
-
-<!-- 12-06-2024(wednesday):-
-
-this command uesd only at the first time
-git push --set-upstream origin main
-
-JSX:
-
-every componemmt returns the markp(HTML) -->
+note: Because of vdom updates are very faster , loading time is minimal
+ex: 10 list item, when new list item is inserted , react creates a v-dom , compare changes with previous one , only updated new one
