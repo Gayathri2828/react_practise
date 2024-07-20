@@ -1,130 +1,77 @@
-<!-- # Getting Started with Create React App
+Topics :
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Reason why we need to prefer functional components over class components
+2. Hooks introduction and details
+3. Rules of hooks
+4. UseState hook with examples
 
-## Available Scripts
+Tasks:
 
-In the project directory, you can run:
+1. Repeat the class
+2. Remove all, upadte each
+3. corousel in react (tailwind)
+4. Todays task give table UI
 
-### `npm start`
+Reason why we need to prefer functional components over class components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Complexity will be more in class components
+2. Readability is less in class components
+3. Maintainence is more in class components
+4. scalability takes much time
+5. Every code flow will be spiltted into different parts in the component
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Functional components main feature: Hooks
 
-### `npm test`
+Hooks : Hooks is a feature in the react introduced in 16.8 version
+Hooks let us use of state and other react features(life cycle methods) without using the class
+Hooks are the re-usable predefined funtions provided by the react
+Hooks will common problems like creation of state, managing the state, async actions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Rules of hooks :
 
-### `npm run build`
+1. Hooks are only used in functional components
+2. Hooks must be used on top of the component and must import from react
+3. Hooks cannot be used inside the loops and condition
+4. Hooks cannot be used inside the events
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Hooks Examples:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. useState
+2. useEffect
+3. useRef
+4. useReducer
+5. useContext
+6. useMemo
+7. useCallback
+8. custom hooks (use5R)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React-router-dom
 
-### `npm run eject`
+1. useNavigate
+2. useParams
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+useState :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+useState is a hook which helps us to create the state and manage the state
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+It is replica of state creation using contructor and setState methods
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+syntax:
 
-## Learn More
+1. useState will accept the initialState as an argument
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+initialState-> any data type
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+initialState = 0
 
-### Code Splitting
+useState(initialState)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. useState will return an array which contains 2 elements
 
-### Analyzing the Bundle Size
+1. current state
+1. updaterFuntion : it will update the current state
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+states changes are async
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
-
-
-11-06-2024(Tuesday):-
--------------------
-
-Components:
-Components are the independent resuable bits of code which creates part of user interface. 
-
-Examples of UI:
-1. Button
-2. Image
-3. Heading
-4. Card
-5. Footer
-6. Home screen
-7. About screen
-
-Componebts were created in the .js, ,jsx ,.tsx
-js- javascript
-jsx- javascript XML
-tsx- typescript XML
-
-note: in a file we can create as many as components(.js we can many components)
-
-Types of components:
-we have 2 types of components in react
-
-1. Functional based components -> A component designed using plain js functions.
-2. Class based components-> A component designed using classes in js.
-
-Component
-Every component must start with the capital letter.
-Every component can return the markup.
-Component can be as small as the button or as large as a screen (page).
-
-***React is completely a component based approach
-We will design a componet, will resue the component
-
-Example: I will creat button component, i will use the button component where ever the button appears
-
-ordered list
-1. apple
-2. banana
-
-unordered list
-1. apple
-2. banana
-
-ol- li
-ul- li
-
-
-<!-- 12-06-2024(wednesday):-
-
-this command uesd only at the first time
-git push --set-upstream origin main
-
-JSX:
-
-every componemmt returns the markp(HTML) -->
+final syntax : const[current,updaterFuntion]=useState(initialState)
+const represents the immutability , we cannot change the state directly
