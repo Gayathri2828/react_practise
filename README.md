@@ -1,77 +1,67 @@
-Topics :
-
-1. Reason why we need to prefer functional components over class components
-2. Hooks introduction and details
-3. Rules of hooks
-4. UseState hook with examples
-
 Tasks:
 
 1. Repeat the class
-2. Remove all, upadte each
-3. corousel in react (tailwind)
-4. Todays task give table UI
+2. Check the documentation of hero icons
+3. Register form using uncontrolled components
+4. Store the data in the local storage
+5. Try the todo with uncontrolled
 
-Reason why we need to prefer functional components over class components
+Topics:
 
-1. Complexity will be more in class components
-2. Readability is less in class components
-3. Maintainence is more in class components
-4. scalability takes much time
-5. Every code flow will be spiltted into different parts in the component
+1. State management in react
+2. Forms in react
+3. Uncontrolled components
+4. creating forms using Tailwind css (https://www.devwares.com/blog/how-to-create-react-forms-using-tailwind-css/)
 
-Functional components main feature: Hooks
+Forms :
 
-Hooks : Hooks is a feature in the react introduced in 16.8 version
-Hooks let us use of state and other react features(life cycle methods) without using the class
-Hooks are the re-usable predefined funtions provided by the react
-Hooks will common problems like creation of state, managing the state, async actions
+There are 2 ways to handle the forms in the react applications
 
-Rules of hooks :
+1. uncontrolled components
 
-1. Hooks are only used in functional components
-2. Hooks must be used on top of the component and must import from react
-3. Hooks cannot be used inside the loops and condition
-4. Hooks cannot be used inside the events
+In uncontrolled components , input state changes will be controlled by the DOM
+Field validations were not possible in uncontrolled components , overall form validations will be possible
+Maintanence will be difficult
 
-Hooks Examples:
+2. controlled components
 
-1. useState
-2. useEffect
-3. useRef
-4. useReducer
-5. useContext
-6. useMemo
-7. useCallback
-8. custom hooks (use5R)
+In controlled components , input state changes will be controlled by the React itself  
+Field validations were possible
+Maintanence will be easy
 
-React-router-dom
+Forms important terms :
 
-1. useNavigate
-2. useParams
+1. state management of the inputs
+2. validations
+3. submissions (Https request)
 
-useState :
+4. uncontrolled components :
 
-useState is a hook which helps us to create the state and manage the state
+useRef : useRef is hook in functional components which can directly access the dom through the reference
+useRef hook persists the values between renders
+useRef hook doesn't cause re-renders
 
-It is replica of state creation using contructor and setState methods
+syntax : useRef accepts the initial value(optional), and returns the variable which we can use for attaching for the node reference
 
-syntax:
+const ref = useRef()
 
-1. useState will accept the initialState as an argument
+steps to create uncontrolled components :
 
-initialState-> any data type
+1. Implement the form which contains JSX
+2. Create the references for the inputs using useRef hook provided by the react
+3. Attach the references for the inputs using ref attributes given to the inputs
+4. on submit collect the user input using ref.current.value
 
-initialState = 0
+State managment : Managing the data with in the application
 
-useState(initialState)
+State management is of 2 ways :
 
-2. useState will return an array which contains 2 elements
+1. Local state management
 
-1. current state
-1. updaterFuntion : it will update the current state
+using useState alone only local state management is possible
 
-states changes are async
+2. Global state management :
 
-final syntax : const[current,updaterFuntion]=useState(initialState)
-const represents the immutability , we cannot change the state directly
+Global state management refers to managing data through out the applications irrespective of the size of the application
+
+metaphor : ex: Books library

@@ -1,21 +1,10 @@
  import React from "react";
-// import { Card } from "./components/card/card.js";
-// import { ImageComponents } from "./components/image/imageComponent.js";
-// import { ListParentOrdered } from "./components/list/listParent.js";
+
  import "./index.css";
-// import ButtonComponentClass from "./components/class-components/button.js";
 
-//import ProductListing from "./components/class-components/productListing/productListing.js";
-//import Weather from "./components/weather/weather.js";
 
-//import Counter from "./components/task/count.js";
-//import MountingPhase from "./components/class-components/mounting/mounting.js";
-//import Unmounting from "./components/class-components/unmounting/unMounting.js";
-//import ParentComponent from "./components/class-components/purecomponent/parent.js";
-//import CircleComponent from "./components/class-components/circleTask/circles.js";
-//import UseStateExample from "./components/functionalHooks/useState/useState.js";
-
-import TodoComponents from "./components/functionalHooks/useState/todos.js";
+//import TodoComponents from "./components/functionalHooks/useState/todos.js";
+import Forms from "./components/forms/uncontrolled/forms.js";
 
 
 const App = () => {
@@ -23,7 +12,12 @@ const App = () => {
   return (
      <div>
       
-      <TodoComponents/>
+      {/*<TodoComponents/>*/}
+      {/*<h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>*/}
+    <Forms/>
+
         
       </div>
     );
