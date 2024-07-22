@@ -1,130 +1,67 @@
-<!-- # Getting Started with Create React App
+Tasks:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Repeat the class
+2. Check the documentation of hero icons
+3. Register form using uncontrolled components
+4. Store the data in the local storage
+5. Try the todo with uncontrolled
 
-## Available Scripts
+Topics:
 
-In the project directory, you can run:
+1. State management in react
+2. Forms in react
+3. Uncontrolled components
+4. creating forms using Tailwind css (https://www.devwares.com/blog/how-to-create-react-forms-using-tailwind-css/)
 
-### `npm start`
+Forms :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+There are 2 ways to handle the forms in the react applications
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. uncontrolled components
 
-### `npm test`
+In uncontrolled components , input state changes will be controlled by the DOM
+Field validations were not possible in uncontrolled components , overall form validations will be possible
+Maintanence will be difficult
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. controlled components
 
-### `npm run build`
+In controlled components , input state changes will be controlled by the React itself  
+Field validations were possible
+Maintanence will be easy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Forms important terms :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. state management of the inputs
+2. validations
+3. submissions (Https request)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. uncontrolled components :
 
-### `npm run eject`
+useRef : useRef is hook in functional components which can directly access the dom through the reference
+useRef hook persists the values between renders
+useRef hook doesn't cause re-renders
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+syntax : useRef accepts the initial value(optional), and returns the variable which we can use for attaching for the node reference
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+const ref = useRef()
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+steps to create uncontrolled components :
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Implement the form which contains JSX
+2. Create the references for the inputs using useRef hook provided by the react
+3. Attach the references for the inputs using ref attributes given to the inputs
+4. on submit collect the user input using ref.current.value
 
-## Learn More
+State managment : Managing the data with in the application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+State management is of 2 ways :
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Local state management
 
-### Code Splitting
+using useState alone only local state management is possible
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Global state management :
 
-### Analyzing the Bundle Size
+Global state management refers to managing data through out the applications irrespective of the size of the application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
-
-
-11-06-2024(Tuesday):-
--------------------
-
-Components:
-Components are the independent resuable bits of code which creates part of user interface. 
-
-Examples of UI:
-1. Button
-2. Image
-3. Heading
-4. Card
-5. Footer
-6. Home screen
-7. About screen
-
-Componebts were created in the .js, ,jsx ,.tsx
-js- javascript
-jsx- javascript XML
-tsx- typescript XML
-
-note: in a file we can create as many as components(.js we can many components)
-
-Types of components:
-we have 2 types of components in react
-
-1. Functional based components -> A component designed using plain js functions.
-2. Class based components-> A component designed using classes in js.
-
-Component
-Every component must start with the capital letter.
-Every component can return the markup.
-Component can be as small as the button or as large as a screen (page).
-
-***React is completely a component based approach
-We will design a componet, will resue the component
-
-Example: I will creat button component, i will use the button component where ever the button appears
-
-ordered list
-1. apple
-2. banana
-
-unordered list
-1. apple
-2. banana
-
-ol- li
-ul- li
-
-
-<!-- 12-06-2024(wednesday):-
-
-this command uesd only at the first time
-git push --set-upstream origin main
-
-JSX:
-
-every componemmt returns the markp(HTML) -->
+metaphor : ex: Books library
